@@ -1,14 +1,8 @@
-* {
-  box-sizing: border-box;
-}
+
 :root {
-  --background-color: black;
+
   --text-color: hsl(0, 0%, 100%);
 }
-body {
-  margin: 0;
-}
-
 .hero {
   background-image: url('images/Olle_world_of_warcraft_Illidan_Stormrage_green_Demon_Hunter_lef_2e28116f-7f0e-4a61-8e81-1324b7e30273.png');
   background-size: cover;
@@ -19,30 +13,58 @@ body {
   justify-content: flex-start;
   height: 100vh;
   color: #fff;
-  font-size: 24px;
+  font-size: 2.4rem;
 
 }
 
 .hero-text {
-  max-width: 500px;
-  margin-left: 50px;
+  max-width: 50rem;
+  margin-left: 5rem;
 }
 
 .hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+  font-size: 4.8rem;
+  margin-bottom: 2rem;
 }
 
 .hero p {
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }
 
+/*Nav with Text in middle and links below*/
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* add this to vertically center the links */
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 1.6rem;
+
+}
+.nav-links ul {
+  display: flex;
+  flex-direction: row; /* set the direction to row */
+  justify-content: center;
+  align-items: center;
+}
+.nav-links li {
+  margin: 0 1rem; /* add some horizontal spacing between the links */
+  list-style: none;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+
 /*Character Lookup Text*/
-.wrapper {
+.split-text-wrapper {
   display: grid;
   place-content: center;
-  background-color: var(--background-color);
-  min-height: 100vh;
+  background-color: #000000;
+  min-height: 16rem;
   font-family: "Oswald", sans-serif;
   font-size: clamp(1.5rem, 1rem + 18vw, 6rem);
   font-weight: 700;
@@ -50,7 +72,7 @@ body {
   color: var(--text-color);
 }
 
-.wrapper > div {
+.split-text-wrapper > div {
   grid-area: 1/1/-1/-1;
 }
 .top {
@@ -80,15 +102,16 @@ body {
   flex-direction: column;
   background-color: #5a6953;
   border: 1px solid #000000;
-  border-radius: 10px;
-  padding: 20px 100px;
-  width: 400px;
-  margin: 50px auto;
+  border-radius: 1rem;
+  padding: 2rem 10rem;
+  width: 40rem;
+  margin: 5rem auto;
+  font-size: 1.6rem;
 }
 .form form input{
-  margin-bottom: 20px;
-  padding: 10px;
-  border-radius: 5px;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
   border: 1px solid #000000;
 }
 .form form input[type="submit"]{
@@ -100,8 +123,7 @@ body {
 }
 
 .form form input[type="submit"]:hover,
-.form form input[type="submit"]:focus,
-.form form input[type="submit"]:active{
+.form form input[type="submit"]:focus{
   background-color: #3e7248;
   color: #ffffff;
 }
