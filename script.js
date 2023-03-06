@@ -1,5 +1,5 @@
-const CLIENT_ID = process.env.CLIENT_ID;
-const CLIENT_SECRET = process.env.CLIENT_SECRET;
+const CLIENT_ID = window.CLIENT_ID;
+const CLIENT_SECRET = window.CLIENT_SECRET;
 const REALM = "1175"; //1175 = Dalaran but will add so the form can be used to select the realm
 
 fetch('https://us.battle.net/oauth/token', {
