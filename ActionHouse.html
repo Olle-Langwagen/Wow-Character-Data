@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="globals.css"> 
+    <link rel="stylesheet" href="AH.css">
+    <script src="script.js"></script>
+    <!--<script src="ActionHouse.js"></script>-->
+    <script src="https://wow.zamimg.com/widgets/power.js"></script> <!--Wowhead tooltip. (hovering over items)-->
     <title>Wow Data Lookup</title>
 </head>
 <body>
@@ -21,7 +25,7 @@
             <div class="nav-links">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="ActionHouse.html">Action House</a></li>
+                    <li><a href="about.html">Action House</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -38,15 +42,18 @@
     
     <!--Form-->
     <div class="form">
-        
-        <form action="index.php" method="post">
-            <label for="name">Character Name</label>
-            <input type="text" name="name" id="name" placeholder="Enter Character Name">
-            <label for="realm">Realm</label>
-            <input type="text" name="realm" id="realm" placeholder="Enter Realm">
-            <input type="submit" value="Submit">
+        <form>
+          <label for="realm">Realm</label>
+          <input type="text" name="realm" id="realmInput" placeholder="Enter Realm Name">
+          <button type="button" id="searchButton" class="button-a-normal">Load Auction House</button>
         </form>
-    </div>
+      </div>
+
+      <div class="auctions-header">
+        <div class="price-header">Price</div>
+        <div class="item-header">Item Name</div>
+        <div class="quantity-header">Quantity</div>
+      </div>
 
 </body>
 </html>

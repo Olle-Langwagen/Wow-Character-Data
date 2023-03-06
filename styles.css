@@ -114,16 +114,9 @@
   border-radius: 0.5rem;
   border: 1px solid #000000;
 }
-.form form input[type="submit"]{
-  background-color: #000000;
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
 
-.form form input[type="submit"]:hover,
-.form form input[type="submit"]:focus{
+.form form button:hover,
+.form form button:focus{
   background-color: #3e7248;
   color: #ffffff;
 }
