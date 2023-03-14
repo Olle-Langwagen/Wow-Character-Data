@@ -33,6 +33,7 @@
   align-items: center;
   justify-content: flex-end;
   margin-right: 16px;
+  font-size: 1.4rem;
 }
 
 .price img {
@@ -85,4 +86,8 @@ td {
 
 .wowhead:hover {
   text-decoration: underline;
+}
+
+.goldText {
+  color: #ffd700;
 }

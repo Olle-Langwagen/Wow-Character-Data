@@ -1,5 +1,8 @@
-const CLIENT_ID = window.CLIENT_ID;
-const CLIENT_SECRET = window.CLIENT_SECRET;
+
+const CLIENT_ID = 'fb766b47b70a44018d9ef888f284d5bf';
+const CLIENT_SECRET = 'svU5ftd1jUO9eVe226zbZi37DHzvHNYf';
+//const CLIENT_ID = window.CLIENT_ID;
+//const CLIENT_SECRET = window.CLIENT_SECRET;
 const REALM = "1175"; //1175 = Dalaran but will add so the form can be used to select the realm
 
 fetch('https://us.battle.net/oauth/token', {
@@ -24,7 +27,7 @@ fetch('https://us.battle.net/oauth/token', {
       })
       .then(data => {
         console.log(data); // log the response data to the console for debugging
-        const auctions = data.auctions.slice(0, 100); // get the first 30 auctions
+        const auctions = data.auctions.slice(0, 50); // get the first 30 auctions
 
         if (auctions.length === 0) { // if there are no auctions, display an error message
           const errorMessage = document.createElement('p');
@@ -70,12 +73,18 @@ fetch('https://us.battle.net/oauth/token', {
           
             const priceDiv = document.createElement('div');
             priceDiv.className = 'price';
+            /*
             const priceImg = document.createElement('img');
             priceImg.src = 'https://wow.zamimg.com/images/icons/money-gold.gif';
             priceImg.alt = 'gold coin icon';
+            */
             const priceText = document.createTextNode((auction.buyout / auction.quantity / 10000).toFixed(2));
-            priceDiv.appendChild(priceImg);
+            const goldText  = document.createElement('span');
+            goldText.className = 'goldText';
+            goldText.innerHTML = 'g'
+            /*priceDiv.appendChild(priceImg);*/
             priceDiv.appendChild(priceText);
+            priceDiv.appendChild(goldText);
             auctionDiv.appendChild(priceDiv);
           
             const itemDiv = document.createElement('div');
