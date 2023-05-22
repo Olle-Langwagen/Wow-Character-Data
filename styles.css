@@ -1,43 +1,59 @@
-
 :root {
 
-  --text-color: hsl(0, 0%, 100%);
-}
-.hero {
-  /* Gradient background */
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(57, 91, 67, 0.5)),
-    url("https://images.unsplash.com/photo-1519680772-3b1b1b1b1b1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
-  background-size: cover;
-  background-position: center center;
+    --text-color: hsl(0, 0%, 100%);
+  }
 
+html{
+    box-sizing: border-box;
+    font-size: 10px;
+
+}
+body{
+    background-image: url('images/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+/*Token*/
+#token-container{
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height: 100vh;
-  color: #fff;
-  font-size: 2.4rem;
-
+  flex-direction: column;
+  margin-left: 4rem;
+}
+.token-box {
+  display: inline-block;
+  max-width: 9rem;
+  max-height: 4rem;
+  background-color: #f2f2f2;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
 }
 
-.hero-text {
-  max-width: 50rem;
-  margin-left: 5rem;
+.token-region {
+  color: red;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.token-price {
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
-.hero h1 {
-  font-size: 4.8rem;
-  margin-bottom: 2rem;
-}
 
-.hero p {
-  margin-bottom: 3rem;
-}
 
 /*Nav with Text in middle and links below*/
+/*
 .nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center; /* add this to vertically center the links */
+
   background-color: #000000;
   color: #ffffff;
   font-size: 1.6rem;
@@ -45,12 +61,12 @@
 }
 .nav-links ul {
   display: flex;
-  flex-direction: row; /* set the direction to row */
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 .nav-links li {
-  margin: 0 1rem; /* add some horizontal spacing between the links */
+  margin: 0 1rem;
   list-style: none;
 }
 
@@ -59,14 +75,21 @@
   text-decoration: none;
   transition: all 0.3s ease;
 }
+*/
 
-
-/*Character Lookup Text*/
+/*Oribos Exchange(name)*/
+.nav-wrapper{
+  margin-top: -2rem;
+  margin-left: 4rem;
+  display: flex;
+  justify-content: left;
+}
 .split-text-wrapper {
   display: grid;
   place-content: center;
-  background-color: #000000;
+  
   min-height: 16rem;
+  margin: 0 auto;
   font-family: "Oswald", sans-serif;
   font-size: clamp(1.5rem, 1rem + 18vw, 6rem);
   font-weight: 700;
@@ -96,29 +119,232 @@
 
 
 
-/*Form*/
 
-.form form{
+
+
+
+
+
+
+
+/*Auctions*/
+
+.auctions-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    border-radius: 4px 4px 0 0;
+  
+  }
+  
+  
+  .auction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+  
+  .auction:hover {
+    background-color: #303030;
+  }
+  .price {
+    flex: 0 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 16px;
+    font-size: 1.4rem;
+  }
+  
+  .price img {
+    height: 12px;
+    margin-right: 4px;
+  }
+  
+  .item {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin-right: 16px;
+    overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  }
+  
+  .img {
+    flex: 0 0 56px;
+    margin-right: 16px;
+  }
+  
+  .img img {
+    width: 60%;
+    border-radius: 5px;
+    border: 2px solid #1f1d1d;
+    box-shadow: 5px 5px 5px #000000;
+  }
+  
+  .name {
+    flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: large;
+    
+  }
+  
+  .quantity {
+    flex: 0 0 40px;
+    text-align: center;
+    font-weight: bold;
+  }
+  td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .wowhead {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .wowhead:hover {
+    text-decoration: underline;
+  }
+  
+  .goldText {
+    color: #ffd700;
+  }
+
+/*Sort*/
+
+
+
+/*Form*/
+.form form {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  background-color: #5a6953;
-  border: 1px solid #000000;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 1rem;
-  padding: 2rem 10rem;
-  width: 40rem;
+  padding: 4rem;
+  max-width: 40rem;
   margin: 5rem auto;
   font-size: 1.6rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
-.form form input{
+
+.form form label {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.form form select,
+.form form input {
+  width: 100%;
   margin-bottom: 2rem;
   padding: 1rem;
   border-radius: 0.5rem;
-  border: 1px solid #000000;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 1.6rem;
+  box-sizing: border-box; /* Add this line */
 }
 
-.form form button:hover,
-.form form button:focus{
-  background-color: #3e7248;
+.form form button {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #333333;
   color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.form form button:hover {
+  background-color: #555555;
+}
+
+/*Last updated*/
+#last-updated {
+  display: none;
+}
+#token-timestamp{
+  font-size: 1.2rem;
+}
+
+/*Footer*/
+footer {
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer-links a {
+  font-size: large;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .form form {
+    max-width: 90%;
+    padding: 3rem 2rem;
+  }
+}
+
+
+@keyframes spin {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+
+.loading-spinner {display: flex;
+align-items: center;
+justify-content: center;
+height: 200px;
+}
+.loading-spinner::after{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid #ccc;
+    border-top-color: #666;
+    animation: spin 1s linear infinite;
+}
+
+
+.log-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
 }

@@ -1,8 +1,0 @@
-<?php
-    include "functions.php";
-
-    $accessToken = generateAcccessToken();
-
-    echo "<pre>";
-    print_r($accessToken);
-    die();
