@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Styles-->
+    <!--Styles and script-->
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
     <script src="token.js"></script>
@@ -17,12 +17,14 @@
   <!--Nav-->
   <nav>
     <div class="nav-wrapper">
-        <!--World of Warcraft Data lookup-->
+        <!--World of Warcraft Auction House Item lookup-->
         <div class="split-text-wrapper">
             <div class="top">Oribos Exchange</div>
             <div class="bottom" aria-hidden="true">Oribos Exchange</div>
 
         </div>
+        <!--Added because the cool one not very responsive-->
+        <h2 class="mobile-header">Oribos Exchange</h2>
     </div>
   </nav>
   <div id="token-container">
@@ -43,7 +45,7 @@
   </div>
     
 
-
+  <!--Search form-->
   <div class="form">
     <form>
         <label for="region-select">Region:</label>
@@ -71,9 +73,6 @@
     </form>
   </div>
 
-  <!--Filter-->
-  
-  
 
     <!--All auctions will be displayed dynamically-->
   <div class="auctions-header">
@@ -82,18 +81,13 @@
     <div class="quantity-header">Quantity</div>
   </div>
 
+  <!--Spiiiiin me right round baby right round-->
   <div id="loading-container" style="display: none;">
       <div class="loading-spinner"></div>
   </div>
-
+  <!--This container will be populated with auctions after search-->
   <div id="auctions-container"></div>
   <div id="log-container" class="log-message"></div>
-  <!--
-  <div id="pagination-container">
-      <button id="prev-button" disabled>Previous</button>
-      <button id="next-button" disabled>Next</button>
-  </div>
-  -->
 
   <footer>
     <div class="footer-links">

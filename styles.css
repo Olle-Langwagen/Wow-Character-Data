@@ -21,6 +21,12 @@ body{
     padding: 0;
 }
 
+.mobile-header{
+  display: none;
+  font-size: 5rem;
+  margin-right: 4rem;
+}
+
 /*Token*/
 #token-container{
   display: flex;
@@ -48,41 +54,12 @@ body{
   font-size: 1.5rem;
 }
 
-
-
-/*Nav with Text in middle and links below*/
-/*
-.nav-links {
-
-  background-color: #000000;
-  color: #ffffff;
-  font-size: 1.6rem;
-
-}
-.nav-links ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.nav-links li {
-  margin: 0 1rem;
-  list-style: none;
-}
-
-.nav-links a {
-  color: #ffffff;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-*/
-
 /*Oribos Exchange(name)*/
 .nav-wrapper{
   margin-top: -2rem;
   margin-left: 4rem;
   display: flex;
-  justify-content: left;
+  justify-content: center;
 }
 .split-text-wrapper {
   display: grid;
@@ -113,19 +90,6 @@ body{
   -webkit-background-clip: text;
   transform: translateX(-0.02em);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*Auctions*/
 
@@ -227,10 +191,6 @@ body{
     color: #ffd700;
   }
 
-/*Sort*/
-
-
-
 /*Form*/
 .form form {
   display: flex;
@@ -261,7 +221,7 @@ body{
   border: none;
   background-color: rgba(255, 255, 255, 0.9);
   font-size: 1.6rem;
-  box-sizing: border-box; /* Add this line */
+  box-sizing: border-box;
 }
 
 .form form button {
@@ -308,14 +268,8 @@ footer {
   text-decoration: underline;
 }
 
-@media (max-width: 600px) {
-  .form form {
-    max-width: 90%;
-    padding: 3rem 2rem;
-  }
-}
 
-
+/*Loading spinner*/
 @keyframes spin {
 0% {
     transform: rotate(0deg);
@@ -347,4 +301,25 @@ height: 200px;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
+}
+
+@media (max-width: 634px) {
+  /*Hide split text wrapper*/
+  .split-text-wrapper {
+    display: none;
+  }
+  .mobile-header {
+    display: block;
+    font-size: 6rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .form form {
+    max-width: 90%;
+
+    margin: 0 2rem;
+  }
 }
