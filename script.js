@@ -1,11 +1,7 @@
 const CLIENT_ID = 'fb766b47b70a44018d9ef888f284d5bf';
 const CLIENT_SECRET = 'svU5ftd1jUO9eVe226zbZi37DHzvHNYf';
-<<<<<<< HEAD
-//const CLIENT_ID = window.CLIENT_ID;
-//const CLIENT_SECRET = window.CLIENT_SECRET;
-const REALM = "1175"; //1175 = Trollbane but will add so the form can be used to select the realm
-=======
->>>>>>> 201e385b3ef232f05d0d16bbce297db9090d2355
+
+
 
 // Fetch the access token
 fetch('https://us.battle.net/oauth/token', {
@@ -56,18 +52,10 @@ fetch('https://us.battle.net/oauth/token', {
         if (connectedRealmMatch) {
           return connectedRealmMatch.id;
         }
-<<<<<<< HEAD
-        return response.json();
-      })
-      .then(data => {
-        console.log(data); // log the response data to the console for debugging
-        const auctions = data.auctions.slice(0, 200); // get the auctions
-=======
+
       }
-    
       return null; // Realm not found
     };
->>>>>>> 201e385b3ef232f05d0d16bbce297db9090d2355
 
     // Function to convert item name to item ID
     const getItemId = async (itemName) => {
