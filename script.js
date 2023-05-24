@@ -16,8 +16,6 @@ fetch('https://us.battle.net/oauth/token', {
   .then(data => {
     const accessToken = data.access_token;
 
-    console.log(`Access token: ${accessToken}`);
-
     // Function to fetch the realm list
     const fetchRealmList = async (region) => {
       const response = await fetch(
