@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Styles-->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="globals.css"> 
-    <title>Wow Data Lookup</title>
+    <script src="script.js"></script>
+    <script src="token.js"></script>
+    <script src="https://wow.zamimg.com/widgets/power.js"></script> <!--Wowhead tooltip. (hovering over items)-->
+    <link rel="icon" type="image/x-icon" href="/images/wow.png">
+    <title>Oribos Exchange</title>
 </head>
 <body>
+<<<<<<< HEAD
 
     <!--Nav-->
     <nav>
@@ -25,28 +30,96 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
+=======
+  <!--Nav-->
+  <nav>
+    <div class="nav-wrapper">
+        <!--World of Warcraft Data lookup-->
+        <div class="split-text-wrapper">
+            <div class="top">Oribos Exchange</div>
+            <div class="bottom" aria-hidden="true">Oribos Exchange</div>
+>>>>>>> 201e385b3ef232f05d0d16bbce297db9090d2355
         </div>
-
-    <!--Hero-->
-    <div class="hero">
-		<div class="hero-text">
-			<h1>Data Lookup</h1>
-			<p>tenetur.</p>
-			<p>Lorem ipsum</p>
-		</div>
-	</div>
-    
-    <!--Form-->
-    <div class="form">
-        
-        <form action="index.php" method="post">
-            <label for="name">Character Name</label>
-            <input type="text" name="name" id="name" placeholder="Enter Character Name">
-            <label for="realm">Realm</label>
-            <input type="text" name="realm" id="realm" placeholder="Enter Realm">
-            <input type="submit" value="Submit">
-        </form>
+    </div>
+  </nav>
+  <div id="token-container">
+    <h1>Token prices:</h1>
+    <!-- US token price container -->
+    <div class="token-box">
+      <span class="token-region">US:</span>
+      <span id="us-price" class="token-price"></span>
     </div>
 
+    <!-- EU token price container -->
+    <div class="token-box">
+      <span class="token-region">EU:</span>
+      <span id="eu-price" class="token-price"></span>
+    </div>
+    <p id="last-updated-token">Last Updated: <span id="token-timestamp"></span></p>
+
+  </div>
+    
+
+
+  <div class="form">
+    <form>
+        <label for="region-select">Region:</label>
+        <select id="region-select">
+            <option value="">Select a region</option>
+            <option value="us">US</option>
+            <option value="eu">EU</option>
+        </select>
+
+        <label for="realm-select">Realm:</label>
+        <select id="realm-select">
+            <option value="">Select a realm</option>
+        </select>
+
+
+        <label for="sort-select">Sort by:</label>
+        <select id="sort-select">
+          <option value="lowest">Lowest Price</option>
+          <option value="highest">Highest Price</option>
+        </select>
+
+        <input type="text" id="search-input" placeholder="Search auctions...">
+        <button type="button" id="search-button">Load Auction House</button>
+        <p id="last-updated">Auction data last Updated: <span id="last-updated-timestamp"></span></p>
+    </form>
+  </div>
+
+  <!--Filter-->
+  
+  
+
+    <!--All auctions will be displayed dynamically-->
+  <div class="auctions-header">
+    <div class="price-header">Price</div>
+    <div class="item-header">Item Name</div>
+    <div class="quantity-header">Quantity</div>
+  </div>
+
+  <div id="loading-container" style="display: none;">
+      <div class="loading-spinner"></div>
+  </div>
+
+  <div id="auctions-container"></div>
+  <div id="log-container" class="log-message"></div>
+  <!--
+  <div id="pagination-container">
+      <button id="prev-button" disabled>Previous</button>
+      <button id="next-button" disabled>Next</button>
+  </div>
+  -->
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </div>
+    <p>
+      © 2023 Oribos Exchange, All rights reserved.
+    </p>
+  </footer>
 </body>
 </html>
