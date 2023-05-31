@@ -171,6 +171,7 @@ fetch('https://us.battle.net/oauth/token', {
     }
         const data = await response.json();
         const auctions = data.auctions;
+        console.log(auctions);
             // Filter auctions based on the searched item ID
     const filteredAuctions = auctions.filter(auction => auction.item.id === itemId);
 
@@ -266,7 +267,9 @@ fetch('https://us.battle.net/oauth/token', {
 
 
     removeLoadingAnimation();
-
+    if (filteredAuctions.length === 0) {
+      logMessage('No items found, try searching for the specific item name');
+    }
         // Wowhead tooltip
         window.onload = function() {
           WH.Tooltip.init();
